@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder
 
         ]);
 
-        factory(App\Post::class, 50)->create();
+        // factory(App\Post::class, 50)->create();
         factory(App\User::class, 500)->create();
     }
 }
