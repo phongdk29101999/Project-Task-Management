@@ -8,3 +8,9 @@ Homestead.json
 Homestead.yaml
 /.idea/workspace.xml
 .env
+/mysql/my.cnf
+/nginx/conf.d/app.conf
+/php/local.ini
+docker-compose.yml
+Dockerfile
+project-cli

@@ -13,7 +13,7 @@ class ListsController extends Controller {
         $list = DB::select( DB::raw("SELECT id, title, board_id FROM lists WHERE board_id = '$board_id'") );
         for($i=0; $i<count($list); $i++){
             $list_id = $list[$i]->id;
-            $list[$i]->card = DB::select( DB::raw("SELECT id, title, dead_line, status FROM tasks WHERE lists_id = '$list_id'") );
+            $list[$i]->card = DB::select( DB::raw("SELECT id, title, dead_line, status FROM tasks WHERE list_id = '$list_id'") );
         }
 
         return response()->json($list);

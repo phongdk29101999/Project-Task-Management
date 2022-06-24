@@ -16,7 +16,7 @@ class TaskController extends Controller {
 
     public function saveCard(Request $request, $id, $list_id) {
         $card_id = DB::table('tasks')->insertGetId(
-            ['title' => $request->title, "lists_id" => $list_id]);
+            ['title' => $request->title, "list_id" => $list_id]);
         return response()->json(["id" => $card_id, "title" => $request->title, "list_id" => $list_id]);
     }
 
